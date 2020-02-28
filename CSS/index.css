@@ -10,7 +10,10 @@
   --Color3: #618685;
   --Color4: #1f5673;
   --Color5: #25283d;
+
 }
+
+
 
 .header-container {
     display: flex;
@@ -118,11 +121,80 @@
   .button:hover span:after {
     opacity: 1;
     right: 0;
-    
+  }
+
+.estadistic-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+
+}
+
+.stats{
+    text-align: center;
   }
 
 
+.stats img{
+  width: 400px;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+.quienes-container{
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--Color4);
+   color: var(--Color1);
+}
+
+.quienes-texto{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.quienes-texto div {
+  width: 600px; 
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 2rem;
+}
+
+.quienes-texto img {
+  width: 450px;
+  PADDING-BOTTOM: 2REM;
+
+}
+
+
 /* MEDIA QUERYS // RESPONSIVE ----------------------------------------------------- */
+@media all and (max-width: 1200px){
+  .quienes-texto{
+    flex-direction: column;
+
+  }
+  .quienes-texto p{
+    flex-direction: column;
+    flex-basis: auto;
+  }
+
+}
 
 @media all and (max-width: 900px){
   .nav-container{
@@ -150,6 +222,32 @@
     width: 150px;
   }
 
+  .estadistic-container{
+    height: 400px;
+  }
+
+  .stats{
+    padding: 1rem;
+  }
+  .stats img{
+    width: 300px;
+  }
+  
+
+  
+  .quienes-texto div{
+    width: 600px;
+
+  }
+
+  h2{
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+
 }
 
 @media all and (max-width: 620px){
@@ -175,5 +273,60 @@
     font-size: 0.6rem;
     padding: 0.8rem;
     width: 100px;
+  }
+
+  .stats{
+    padding: 0.7rem;
+  }
+  .stats img{
+    width: 200px;
+  }
+  
+  .estadistic-container{
+    height: 200px;
+  }
+
+  h3{
+    font-size: 0.7rem;
+  }
+ 
+  .quienes-texto{
+    flex-wrap: wrap;
+  
+  }
+  .quienes-texto img{
+    width: 300px;
+  }
+
+  .quienes-texto div{
+    width: 400px;
+    padding: 0.5rem;
+  }
+
+  .quienes-texto p{
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+    padding: 0.7rem; 
+    
+  }
+
+  h2{
+    font-size: 0.7rem;
+    padding: 0.7rem;
+  }
+  
+}
+
+@media all and (max-width: 450px){
+
+  .quienes-texto div{
+    width: 300px;
+    padding: 0.5rem;
+  }
+  .quienes-texto img{
+    width: 280px;
+  }
+  .stats img{
+    width: 120px;
   }
 }
